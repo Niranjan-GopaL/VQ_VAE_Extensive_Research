@@ -1,0 +1,8 @@
+{
+  "fid_score": 266.1453855118108,
+  "num_embeddings": 512,
+  "embedding_dim": 64,
+  "num_training_samples": 2474,
+  "final_vq_loss": 0.04661650869708795,
+  "final_perplexity": 4.241323397709773
+}
