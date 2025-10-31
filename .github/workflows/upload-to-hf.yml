@@ -3,8 +3,7 @@ name: Upload to Hugging Face
 on:
   push:
     paths:
-      - 'vqvae_and_prior_training/phase_1_manual_hp_tuning/hp_commitment_cost_experiments/commitment_cost_10_first_config_to_give_100p_utilization/checkpoints/vqvae_final.pt
-'  # Trigger only when this file changes
+      - 'vqvae_and_prior_training/phase_1_manual_hp_tuning/hp_commitment_cost_experiments/commitment_cost_10_first_config_to_give_100p_utilization/checkpoints/vqvae_final.pt'  # Trigger only when this file changes
     branches:
       - main  # Or your default branch
 
@@ -24,6 +23,8 @@ jobs:
         python-version: '3.10'
     
     - name: Install dependencies
+      env:
+        HF_TOKEN: ${{secrets.HF_TOKEN }}
       run: |
         pip install huggingface_hub
     
